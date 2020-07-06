@@ -1,8 +1,8 @@
 import React from 'react';
-import { HeaderArea } from './styles';
+import { FooterArea } from './styles';
 
 const Header = () => {
-   return <HeaderArea></HeaderArea>;
+   return <FooterArea></FooterArea>;
 };
 
 export default Header;

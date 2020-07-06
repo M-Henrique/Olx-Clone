@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './routes';
 import { Template } from './components/MainComponents';
@@ -9,11 +10,13 @@ import './App.css';
 
 function App() {
    return (
-      <Template>
-         <Header />
-         <Routes />
-         <Footer />
-      </Template>
+      <BrowserRouter>
+         <Template>
+            <Header />
+            <Routes />
+            <Footer />
+         </Template>
+      </BrowserRouter>
    );
 }
 
