@@ -72,6 +72,7 @@ const OlxAPI = {
 
    getUfs: async () => {
       const json = await apiFetchGet('/states');
+      console.log(json);
       return json.states;
    },
 };
