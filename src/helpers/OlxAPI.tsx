@@ -2,7 +2,9 @@ import Cookies from 'js-cookie';
 import qs from 'qs';
 
 type Body = object & {
+   name?: string;
    token?: string;
+   uf?: string;
    email: string;
    password: string;
 };
@@ -60,8 +62,17 @@ const OlxAPI = {
    login: async (email: string, password: string) => {
       const json = await apiFetchPost('/user/signin', { email, password });
       return json;
+   },
 
-      //return { token: 'Teste', error: 'Funcionalidade incompleta' };
+   register: async (name: string, email: string, password: string, uf: string) => {
+      const json = await apiFetchPost('/user/signup', { name, email, password, uf: uf });
+
+      return json;
+   },
+
+   getUfs: async () => {
+      const json = await apiFetchGet('/states');
+      return json.states;
    },
 };
 
