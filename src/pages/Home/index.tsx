@@ -77,7 +77,7 @@ const SignIn = () => {
                </div>
                <div className="categoryList">
                   {categories.map((category, index) => (
-                     <Link to={`/ads?cat=${category.slug}`} className="categoryItem">
+                     <Link key={index} to={`/ads?cat=${category.slug}`} className="categoryItem">
                         <img src={category.img} alt="Imagem da categoria" />
                         <span>{category.name}</span>
                      </Link>

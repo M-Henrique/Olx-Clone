@@ -10,12 +10,14 @@ interface BodyPost {
 }
 
 interface AdsOpt {
-   sort: string;
-   limit: number;
+   sort?: string;
+   limit?: number;
 }
 
 interface ParamsGet extends AdsOpt {
    token?: string;
+   id?: string;
+   other?: boolean;
 }
 
 const BASEAPI = 'http://alunos.b7web.com.br:501';
@@ -91,6 +93,11 @@ const OlxAPI = {
 
    getAds: async (options: AdsOpt) => {
       const json = apiFetchGet('/ad/list', options);
+      return json;
+   },
+
+   getAd: async (id: string, other: boolean = false) => {
+      const json = await apiFetchGet('/ad/item', { id, other });
       return json;
    },
 };
