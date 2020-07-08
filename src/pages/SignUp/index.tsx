@@ -30,7 +30,7 @@ const SignUp = () => {
          setUfList(ufList);
       };
       getUfs();
-   }, []);
+   }, [api]);
 
    const handleSubmit = async (e: FormEvent) => {
       e.preventDefault();
