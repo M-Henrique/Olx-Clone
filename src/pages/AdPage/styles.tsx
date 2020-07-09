@@ -102,6 +102,41 @@ export const PageArea = styled.div`
          margin-top: 10px;
       }
    }
+
+   @media (max-width: 600px) {
+      & {
+         flex-direction: column;
+      }
+
+      .leftSide {
+         margin: 0;
+
+         .box {
+            width: 320px;
+            margin: auto;
+            flex-direction: column;
+         }
+
+         #adInfo {
+            padding: 10px;
+         }
+      }
+
+      .rightSide {
+         width: auto;
+         margin-top: 20px;
+
+         .box {
+            width: 320px;
+            margin: auto;
+         }
+
+         .contactSellerLink {
+            width: 320px;
+            margin: 20px auto;
+         }
+      }
+   }
 `;
 
 export const OthersArea = styled.div`
@@ -117,6 +152,16 @@ export const OthersArea = styled.div`
          width: 25%;
       }
    }
+
+   @media (max-width: 600px) {
+      & {
+         margin: 10px;
+      }
+
+      .list .aditem {
+         width: 50%;
+      }
+   }
 `;
 
 export const BreadCrumb = styled.div`
@@ -128,5 +173,11 @@ export const BreadCrumb = styled.div`
       text-decoration: underline;
       margin: 0 5px;
       color: #000;
+   }
+
+   @media (max-width: 600px) {
+      & {
+         margin: 20px;
+      }
    }
 `;
