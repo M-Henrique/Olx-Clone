@@ -16,6 +16,10 @@ interface BodyFilePost extends FormData {
 interface AdsOpt {
    sort?: string;
    limit?: number;
+   q?: string | null;
+   cat?: string | null;
+   state?: string | null;
+   offset?: number;
 }
 
 interface ParamsGet extends AdsOpt {

@@ -10,6 +10,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import AdPage from './pages/AdPage';
 import AddAd from './pages/AddAd';
+import Ads from './pages/Ads';
 
 const Routes = () => {
    return (
@@ -20,6 +21,7 @@ const Routes = () => {
          <RouteHandler component={SignUp} path="/signup"></RouteHandler>
          <RouteHandler component={AdPage} path="/ad/:id"></RouteHandler>
          <RouteHandler private component={AddAd} path="/post-an-ad"></RouteHandler>
+         <RouteHandler component={Ads} path="/ads"></RouteHandler>
          <RouteHandler component={NotFound}></RouteHandler>
       </Switch>
    );
