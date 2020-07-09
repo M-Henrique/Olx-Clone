@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+import RouteHandler from './components/RouteHandler';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,12 +13,13 @@ import AdPage from './pages/AdPage';
 const Routes = () => {
    return (
       <Switch>
-         <Route component={Home} path="/" exact></Route>
-         <Route component={About} path="/about"></Route>
-         <Route component={SignIn} path="/signin"></Route>
-         <Route component={SignUp} path="/signup"></Route>
-         <Route component={AdPage} path="/ad/:id"></Route>
-         <Route component={NotFound}></Route>
+         <RouteHandler component={Home} path="/" exact></RouteHandler>
+         <RouteHandler component={About} path="/about"></RouteHandler>
+         <RouteHandler component={SignIn} path="/signin"></RouteHandler>
+         <RouteHandler component={SignUp} path="/signup"></RouteHandler>
+         <RouteHandler component={AdPage} path="/ad/:id"></RouteHandler>
+         <RouteHandler private component={About} path="/post-an-ad"></RouteHandler>
+         <RouteHandler component={NotFound}></RouteHandler>
       </Switch>
    );
 };
