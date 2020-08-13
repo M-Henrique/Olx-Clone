@@ -11,6 +11,7 @@
 - Custom Routes
 - Responsiveness
 - Forms Treatment
+- Flexbox
 <br />
 
 <img alt="Tela 1" src="src/assets/prints/OLX-1.png" >
