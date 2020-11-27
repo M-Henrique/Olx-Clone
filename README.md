@@ -1,5 +1,5 @@
-<h1 align="center">Pizza-Store</h1>
-<h4 align="center">Pizza Store mini project, made with pure Javascript.</h4>
+<h1 align="center">OLX-Clome</h1>
+<h4 align="center">OLX Clone, made with pure Javascript.</h4>
 
 <div align="center"><em>for educational purposes</em></div>
 
